@@ -17,7 +17,15 @@ public class What_and_Why_of_Functions
         }
         return fact;
     }
+    public static int ncr(int n, int r)
+    {
+        int factN = factorial(n);
+        int factR = factorial(r);
+        int factNR = factorial(n-r);
 
+        int result = factN / (factR * factNR);
+        return result;
+    }
     public static void main(String args[])
     {
         Scanner sc = new Scanner(System.in);
@@ -26,11 +34,7 @@ public class What_and_Why_of_Functions
         System.out.println("Enter r");
         int r = sc.nextInt();
 
-        int factN = factorial(n);
-        int factR = factorial(r);
-        int factNR = factorial(n-r);
-
-        int result = factN / (factR * factNR);
+        int result = ncr(n, r);
         System.out.println(result);
         sc.close();
     }
