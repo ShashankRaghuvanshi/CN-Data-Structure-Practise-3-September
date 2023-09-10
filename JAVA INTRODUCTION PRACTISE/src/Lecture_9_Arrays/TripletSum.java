@@ -2,7 +2,7 @@ package Lecture_9_Arrays;
 
 import java.util.Scanner;
 
-public class PairSum 
+public class TripletSum 
 {
     public static int[] takeInput()
     {
@@ -15,19 +15,22 @@ public class PairSum
         }
         return arr;
     }
-    public static int pairSum(int arr[])
+    public static int tripletSum(int arr[])
     {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int count = 0;
-        for(int i=0; i<arr.length-1; i++)
+        for(int i=0; i<arr.length-2; i++)
         {
-            for(int j=i+1; j<arr.length; j++)
+            for(int j=i+1; j<arr.length-1; j++)
             {
-                int sum = arr[i] + arr[j];
-                if(n == sum)
+                for(int k=j+1; k<arr.length; k++)
                 {
-                    count++;
+                    int sum = arr[i] + arr[j] + arr[k];
+                    if(n == sum)
+                    {
+                        count++;
+                    }
                 }
             }
         }
@@ -36,7 +39,7 @@ public class PairSum
     public static void main(String args[])
     {
         int arr[] = takeInput();
-        int count = pairSum(arr);
+        int count = tripletSum(arr);
         System.out.println(count);
     }
 }
