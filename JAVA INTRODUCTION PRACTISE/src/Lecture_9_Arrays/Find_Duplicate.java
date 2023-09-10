@@ -2,7 +2,7 @@ package Lecture_9_Arrays;
 
 import java.util.Scanner;
 
-public class Find_Unique 
+public class Find_Duplicate 
 {
     public static int[] takeInput()
     {
@@ -25,7 +25,7 @@ public class Find_Unique
         }
         System.out.println();
     }
-    public static void findUnique(int arr[])
+    public static void findDuplicate(int arr[])
     {
         for(int i=0; i<arr.length; i++)
         {
@@ -37,7 +37,7 @@ public class Find_Unique
                     count++;
                 }
             }
-            if(count<2)
+            if(count>1)
             {
                 System.out.println(arr[i]);
                 return;
@@ -49,6 +49,6 @@ public class Find_Unique
     {
         int arr[] = takeInput();
         printArr(arr);
-        findUnique(arr);
+        findDuplicate(arr);
     }
 }
