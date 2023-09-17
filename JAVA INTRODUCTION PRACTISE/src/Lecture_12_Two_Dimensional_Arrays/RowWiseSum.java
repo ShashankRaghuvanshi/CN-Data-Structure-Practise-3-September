@@ -1,4 +1,4 @@
-package Lecture_12_Two_Dimensional_Arrays.Lecture_12_Two_Dimensional_Arrays.java;
+package Lecture_12_Two_Dimensional_Arrays;
 
 import java.util.Scanner;
 
